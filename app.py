@@ -38,8 +38,6 @@ def generate_text_seq(model, tokenizer, text_seq_length, seed_text, n_words):
 
 
 def main():
-    
-    five_words = ""
     # giving a title
     st.title('NLM: NEXT WORD PREDICTOR')
     
@@ -53,6 +51,7 @@ def main():
     
     # code for Prediction
     word = ''
+    five_words = ""
     
     # creating a button for Prediction
     
@@ -63,10 +62,10 @@ def main():
         for i in range(5) :
           word = generate_text_seq(model, tokenizer, 5, sentance, 1)
           sentance  = sentance + word   
-          five_word = five_word + " " + word
+          five_word = five_words  + " " + word
         
         
-    st.success(five_word)
+    st.success(five_words)
     
     
     
