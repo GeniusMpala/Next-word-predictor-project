@@ -53,6 +53,7 @@ def main():
     
     # code for Prediction
     word = ''
+    five_words = ""
     
     # creating a button for Prediction
     
@@ -60,7 +61,6 @@ def main():
       if sentance == '':
         st.success('please enter a five word sentence')
       else:
-        five_words = ""
         for i in range(5) :
           word = generate_text_seq(model, tokenizer, 5, sentance, 1)
           sentance  = sentance + word   
