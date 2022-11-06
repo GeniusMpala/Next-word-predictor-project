@@ -39,7 +39,7 @@ def generate_text_seq(model, tokenizer, text_seq_length, seed_text, n_words):
 
 def main():
     
-    
+    five_words = ""
     # giving a title
     st.title('NLM: NEXT WORD PREDICTOR')
     
@@ -53,7 +53,6 @@ def main():
     
     # code for Prediction
     word = ''
-    five_words = ""
     
     # creating a button for Prediction
     
