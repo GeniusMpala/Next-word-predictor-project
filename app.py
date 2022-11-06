@@ -62,7 +62,7 @@ def main():
         for i in range(5) :
           word = generate_text_seq(model, tokenizer, 5, sentance, 1)
           sentance  = sentance + word   
-          five_word = five_words  + " " + word
+          five_words = five_words  + " " + word
           print(five_word)
         
         
