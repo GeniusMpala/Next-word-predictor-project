@@ -60,10 +60,14 @@ def main():
       if sentance == '':
         st.success('please enter a five word sentence')
       else:
-        word = generate_text_seq(model, tokenizer, 5, sentance, 1)
+        five_words = ""
+        for i in range(5) :
+          word = generate_text_seq(model, tokenizer, 5, sentance, 1)
+          sentance  = sentance + word   
+          five_word = five_word + " " + word
         
         
-    st.success(word + word)
+    st.success(five_word)
     
     
     
