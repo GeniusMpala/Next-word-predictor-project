@@ -63,7 +63,7 @@ def main():
         word = generate_text_seq(model, tokenizer, 5, sentance, 1)
         
         
-    st.success(word)
+    st.success(word + word)
     
     
     
