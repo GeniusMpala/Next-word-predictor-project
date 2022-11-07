@@ -1,5 +1,3 @@
-
-
 import numpy as np
 import pickle
 import streamlit as st
@@ -38,6 +36,8 @@ def generate_text_seq(model, tokenizer, text_seq_length, seed_text, n_words):
 
 
 def main():
+    
+    
     # giving a title
     st.title('NLM: NEXT WORD PREDICTOR')
     
@@ -51,22 +51,17 @@ def main():
     
     # code for Prediction
     word = ''
-    five_words = ""
     
     # creating a button for Prediction
     
     if st.button('view predicted word'):
-      if sentance == '':
+      if len(sentance.split()) <5 :
         st.success('please enter a five word sentence')
       else:
-        for i in range(5) :
-          word = generate_text_seq(model, tokenizer, 5, sentance, 1)
-          sentance  = sentance + " " +  word   
-          five_words = five_words  + " " + word
-          print(sentance)
+        word = generate_text_seq(model, tokenizer, 5, sentance, 1)
         
         
-    st.success(five_words)
+    st.success(word)
     
     
     
@@ -74,6 +69,3 @@ def main():
     
 if __name__ == '__main__':
     main()
-    
-    
-
